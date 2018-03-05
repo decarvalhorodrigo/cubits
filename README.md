@@ -24,7 +24,8 @@ In case "curl" isn't yet installed type in the terminal:
 
 Let's now install [Geckodriver] (https://github.com/mozilla/geckodriver/releases):
 
-```curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+```
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install jq nodejs curl -qy
 sudo npm install -g geckodriver
 ```
@@ -35,7 +36,8 @@ Install [node.js] (https://nodejs.org/en/):
 
 Now run these commands to install [Bundler] (http://bundler.io/) and [Cucumber] (https://cucumber.io/)	
 
-```sudo gem install bundler
+```
+sudo gem install bundler
 
 xcode-select --install
 
@@ -48,7 +50,8 @@ Install [Chrome] (https://www.google.com/chrome/) for your OS
 
 Inside the project's folder create a Gemfile with the following gems:
 
-```source 'https://rubygems.org'
+```
+source 'https://rubygems.org'
 
 gem 'cucumber', '~> 3.1'
 gem 'capybara', '~> 2.16', '>= 2.16.1'
@@ -65,7 +68,8 @@ And then run:
 
 Inside ./features/support/env.rb copy:
 
-```require 'capybara/cucumber'
+```
+require 'capybara/cucumber'
 require 'selenium-webdriver'
 
 Capybara.register_driver :selenium do |app|
@@ -80,7 +84,8 @@ Capybara.app_host = "https://cubits.com/"
 
 Inside /features/specifications create a .feature and copy:
 
-```Feature: Login
+```
+Feature: Login
 
 Scenario: Login on Cubits webpage   
 
