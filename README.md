@@ -62,11 +62,6 @@ Back to your folder run:
 
 ```
 $ bundle install
-```
-
-And then run:
-
-```
 $ cucumber --init
 ```
 
