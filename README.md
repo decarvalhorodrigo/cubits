@@ -1,35 +1,36 @@
 # Cubits QA Automation Engineer Assignment
 
-## INSTALL 
+### INSTALL 
 
-After installing the XCode, it's necessary to install Homebrew. Go to your Terminal and run:
+##### After installing the XCode, it's necessary to install [Homebrew](https://brew.sh/). Go to your Terminal and run:
 
-ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .
+`<addr>` ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .
 
-After having the Homebrew installed, you will install Qt:
+##### After having the Homebrew installed, you will install [Qt](https://www.qt.io/):
 
 brew install qt
 
-Now install the Ruby Version Manager (RVM):
+##### Now install the [Ruby Version Manager (RVM)] (https://rvm.io/):
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
 Restart the Terminal
 
-In case "curl" isn't yet installed type in the terminal: 
+##### In case "curl" isn't yet installed type in the terminal: 
+
 brew install curl
 
-Let's now install Geckodriver:
+##### Let's now install [Geckodriver] (https://github.com/mozilla/geckodriver/releases):
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install jq nodejs curl -qy
 sudo npm install -g geckodriver
 
-Install node:
+##### Install [node.js] (https://nodejs.org/en/):
 
 brew install node
 
-Now run these commands to install Bundler and Cucumber
+##### Now run these commands to install [Bundler] (http://bundler.io/) and [Cucumber] (https://cucumber.io/)	
 
 sudo gem install bundler
 
@@ -37,11 +38,11 @@ xcode-select --install
 
 bundle install
 
-Install Chrome for your OS
+##### Install [Chrome] (https://www.google.com/chrome/) for your OS
 
 ## PREPARE ENVIRONMENT FOR MOBILE TESTS
 
-Inside the project's folder create a Gemfile with the following gems:
+##### Inside the project's folder create a Gemfile with the following gems:
 
 source 'https://rubygems.org'
 
@@ -49,15 +50,15 @@ gem 'cucumber', '~> 3.1'
 gem 'capybara', '~> 2.16', '>= 2.16.1'
 gem 'selenium-webdriver', '~> 3.8'
 
-Back to your folder run:
+##### Back to your folder run:
 
 bundle install
 
-and then run:
+##### and then run:
 
 cucumber --init
 
-inside ./features/support/env.rb copy:
+##### Inside ./features/support/env.rb copy:
 
 require 'capybara/cucumber'
 require 'selenium-webdriver'
@@ -71,7 +72,7 @@ Capybara.default_max_wait_time = 40
  	 
 Capybara.app_host = "https://cubits.com/" 	
 
-Inside /features/specifications create a .feature and copy:
+##### Inside /features/specifications create a .feature and copy:
 
 Feature: Login
 
@@ -81,7 +82,7 @@ Given I click on Login
 When I fill in obligatory fields
 Then I will successfully login
 
-Inside /features/step_definitions create a .rb and copy:
+##### Inside /features/step_definitions create a .rb and copy:
 
 Given("I click on Login") do
 	visit 'https://cubits.com/'
@@ -102,7 +103,7 @@ Then("I will successfully login") do
   page.has_content?('Welcome to your dashboard.')
 end
 
-Now inside the folder where ./features is located run:
+##### Now inside the folder where ./features is located run:
 
 cucumber
 
