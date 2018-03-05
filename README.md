@@ -2,7 +2,7 @@
 
 ### INSTALL 
 
-After installing the [XCode] (https://developer.apple.com/xcode/), you will need to install [Homebrew](https://brew.sh/). Go to your Terminal and run:
+After installing the [XCode](https://developer.apple.com/xcode/), you will need to install [Homebrew](https://brew.sh/). Go to your Terminal and run:
 
 ```
 $ ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .
