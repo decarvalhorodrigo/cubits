@@ -94,11 +94,12 @@ Scenario: Login on Cubits webpage
 
 Given I click on Login
 When I fill in obligatory fields
-Then I will successfully login`
+Then I will successfully login
+```
 
 Inside /features/step_definitions create a .rb and copy:
 
-`Given("I click on Login") do
+```Given("I click on Login") do
 	visit 'https://cubits.com/'
 	within('ul.nav__login') do
 		puts find('a', :text => 'LOGIN')
