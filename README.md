@@ -4,16 +4,17 @@
 
 After installing the XCode, it's necessary to install [Homebrew](https://brew.sh/). Go to your Terminal and run:
 
-`ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .` 
+`$ ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .` 
 
 After having the Homebrew installed, you will install [Qt](https://www.qt.io/):
 
-`brew install qt`
+`$ brew install qt`
 
 Now install the [Ruby Version Manager (RVM)] (https://rvm.io/):
 
-```gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable
+```
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+$ curl -sSL https://get.rvm.io | bash -s stable
 ```
 
 Restart the Terminal
@@ -25,23 +26,23 @@ In case "curl" isn't yet installed type in the terminal:
 Let's now install [Geckodriver] (https://github.com/mozilla/geckodriver/releases):
 
 ```
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install jq nodejs curl -qy
-sudo npm install -g geckodriver
+$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+$ sudo apt-get install jq nodejs curl -qy
+$ sudo npm install -g geckodriver
 ```
 
 Install [node.js] (https://nodejs.org/en/):
 
-`brew install node`
+`$ brew install node`
 
 Now run these commands to install [Bundler] (http://bundler.io/) and [Cucumber] (https://cucumber.io/)	
 
 ```
-sudo gem install bundler
+$ sudo gem install bundler
 
-xcode-select --install
+$ xcode-select --install
 
-bundle install
+$ bundle install
 ```
 
 Install [Chrome] (https://www.google.com/chrome/) for your OS
@@ -60,11 +61,11 @@ gem 'selenium-webdriver', '~> 3.8'
 
 Back to your folder run:
 
-`bundle install`
+`$ bundle install`
 
 And then run:
 
-`cucumber --init`
+`$ cucumber --init`
 
 Inside ./features/support/env.rb copy:
 
@@ -117,6 +118,6 @@ end
 
 Now inside the folder where ./features is located run:
 
-`cucumber`
+`$ cucumber`
 
 
