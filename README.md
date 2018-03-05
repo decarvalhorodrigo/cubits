@@ -13,7 +13,8 @@ After having the Homebrew installed, you will install [Qt](https://www.qt.io/):
 Now install the [Ruby Version Manager (RVM)] (https://rvm.io/):
 
 ```gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable```
+curl -sSL https://get.rvm.io | bash -s stable
+```
 
 Restart the Terminal
 
@@ -25,7 +26,8 @@ Let's now install [Geckodriver] (https://github.com/mozilla/geckodriver/releases
 
 ```curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install jq nodejs curl -qy
-sudo npm install -g geckodriver```
+sudo npm install -g geckodriver
+```
 
 Install [node.js] (https://nodejs.org/en/):
 
@@ -37,7 +39,8 @@ Now run these commands to install [Bundler] (http://bundler.io/) and [Cucumber] 
 
 xcode-select --install
 
-bundle install```
+bundle install
+```
 
 Install [Chrome] (https://www.google.com/chrome/) for your OS
 
@@ -49,7 +52,8 @@ Inside the project's folder create a Gemfile with the following gems:
 
 gem 'cucumber', '~> 3.1'
 gem 'capybara', '~> 2.16', '>= 2.16.1'
-gem 'selenium-webdriver', '~> 3.8'```
+gem 'selenium-webdriver', '~> 3.8'
+```
 
 Back to your folder run:
 
@@ -71,7 +75,8 @@ end
 Capybara.default_driver = :selenium_chrome
 Capybara.default_max_wait_time = 40
  	 
-Capybara.app_host = "https://cubits.com/"```	
+Capybara.app_host = "https://cubits.com/"
+```
 
 Inside /features/specifications create a .feature and copy:
 
@@ -102,7 +107,8 @@ end
 
 Then("I will successfully login") do
   page.has_content?('Welcome to your dashboard.')
-end```
+end
+```
 
 Now inside the folder where ./features is located run:
 
