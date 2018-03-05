@@ -1,4 +1,4 @@
-# Cubits QA Automation Engineer Assignment
+# Cubits Assignment
 
 ### INSTALL 
 
