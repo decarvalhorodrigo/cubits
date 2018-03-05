@@ -4,7 +4,7 @@
 
 ##### After installing the XCode, it's necessary to install [Homebrew](https://brew.sh/). Go to your Terminal and run:
 
-`<addr>` ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .
+`<ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)” .>` 
 
 ##### After having the Homebrew installed, you will install [Qt](https://www.qt.io/):
 
