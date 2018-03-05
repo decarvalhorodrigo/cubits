@@ -55,6 +55,7 @@ source 'https://rubygems.org'
 gem 'cucumber', '~> 3.1'
 gem 'capybara', '~> 2.16', '>= 2.16.1'
 gem 'selenium-webdriver', '~> 3.8'
+gem 'chromedriver-helper','~> 1.2.0'
 ```
 
 Back to your folder run:
@@ -85,7 +86,7 @@ Capybara.default_max_wait_time = 40
 Capybara.app_host = "https://cubits.com/"
 ```
 
-Inside /features/specifications create a .feature and copy:
+Inside ./features create a folder specifications and .feature inside it then copy:
 
 ```
 Feature: Login
@@ -97,9 +98,10 @@ When I fill in obligatory fields
 Then I will successfully login
 ```
 
-Inside /features/step_definitions create a .rb and copy:
+Inside ./features/step_definitions create a .rb, copy the steps below editing the fields 'your-user-email' and 'your-password':
 
-```Given("I click on Login") do
+```
+Given("I click on Login") do
 	visit 'https://cubits.com/'
 	within('ul.nav__login') do
 		puts find('a', :text => 'LOGIN')
