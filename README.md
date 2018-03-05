@@ -14,7 +14,7 @@ After having the Homebrew installed, install [Qt](https://www.qt.io/):
 $ brew install qt
 ```
 
-Now install the [Ruby Version Manager (RVM)](https://rvm.io/):
+After having the Homebrew installed, install [Ruby Version Manager (RVM)](https://rvm.io/):
 
 ```
 $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -27,14 +27,6 @@ In case "curl" isn't yet installed type in the terminal:
 
 ```
 brew install curl
-```
-
-Let's now install [Geckodriver](https://github.com/mozilla/geckodriver/releases):
-
-```
-$ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-$ sudo apt-get install jq nodejs curl -qy
-$ sudo npm install -g geckodriver
 ```
 
 Install [node.js](https://nodejs.org/en/):
